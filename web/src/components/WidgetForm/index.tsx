@@ -6,6 +6,7 @@ import ideaImageUrl from '../../assests/idea.svg';
 import thoughtImageUrl from '../../assests/thought.svg';
 import { FeedbackSucessStep } from "./Steps/FeedbackSucessStep";
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
+import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
 
 
  export const feedbackTypes = {
@@ -42,17 +43,11 @@ export function WidegtForm() {
 
     return (
         <div className="bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-auto">
-            <header>
-                <span className="text-xl leading-6">Deixe seu feedback</span>
-
-                <CloseButton />
-            </header>
-
 
             {!feedbackType ? (
-                <FeedbackSucessStep onFeedbackTypeChanged={setFeedbackType} />
+                <FeedbackTypeStep onFeedbackTypeChanged={setFeedbackType} />
             ): (
-                <FeedbackContentStep />
+                <FeedbackContentStep feedbackType={feedbackType} />
             )}
 
             <footer className="text-xs text-neutral-400">
