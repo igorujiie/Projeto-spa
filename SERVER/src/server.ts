@@ -1,9 +1,21 @@
 import express from 'express'
+import nodemailer from 'nodemailer'
 import { prisma } from './prisma';
 
 const app = express();
 
 app.use(express.json());
+
+
+const  transport = nodemailer.createTransport({
+    host: "smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+      user: "c54a82eb3afad8",
+      pass: "5c83bf94abfbb6"
+    }
+  });
+
 
 app.post('/feedbacks', async (req,res) =>{
 const {type, comment, screenshot}=  req.body;
@@ -14,8 +26,18 @@ const {type, comment, screenshot}=  req.body;
             comment,
             screenshot,
         }
-    })
+    });
 
+
+    transport.sendMail({
+        from: 'Equipe Feedget <oi@feedget.com>',
+        to: 'igor <igorkazuhico@hotmail.com>',
+        subject: 'novo Feedback',
+        html: [
+            `<p>Tipo do Feedback: ${type} </p>`,
+            `<p>comentario: ${comment} </p>`,
+        ].join('\n') 
+    });
   
     return res.status(201).json({data:feedback});
 });
