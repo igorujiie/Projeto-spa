@@ -29,13 +29,15 @@ const {type, comment, screenshot}=  req.body;
     });
 
 
-    transport.sendMail({
+    await transport.sendMail({
         from: 'Equipe Feedget <oi@feedget.com>',
         to: 'igor <igorkazuhico@hotmail.com>',
         subject: 'novo Feedback',
         html: [
+            `<div style ="font-family: sans-serif; font-size: 16px; color: #111;">`,
             `<p>Tipo do Feedback: ${type} </p>`,
             `<p>comentario: ${comment} </p>`,
+            `</div>`
         ].join('\n') 
     });
   
