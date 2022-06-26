@@ -7,7 +7,7 @@
 } */
 
 #light{
-    @apply bg-[#2130fb] text-zinc-100
+    @apply bg-[#cacdf4] text-zinc-900
 }
 
 #dark{

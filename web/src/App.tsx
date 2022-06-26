@@ -19,6 +19,7 @@ export function App(){
       <div className="App" id={theme}> 
         <Widget />
         <div className="switch">
+          <label > {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
           <ReactSwitch onChange={toggleTheme} checked={theme ==="dark"} />
         </div>
         <APIcovid />
