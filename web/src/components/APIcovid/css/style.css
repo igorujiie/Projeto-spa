@@ -120,3 +120,7 @@ p{
 #light  p {
   color: black;
 }
+
+#dark .footer p{
+  color: white;
+}
