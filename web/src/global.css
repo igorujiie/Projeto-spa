@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
+    @apply bg-[#09090a] text-zinc-100
+} */
+
+#light{
+    @apply bg-[#2130fb] text-zinc-100
+}
+
+#dark{
     @apply bg-[#09090a] text-zinc-100
 }
+

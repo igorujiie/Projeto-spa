@@ -105,3 +105,10 @@ p{
     text-align: center;
     color: darkgrey;
 }
+.switch {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}

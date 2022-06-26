@@ -1,3 +1,5 @@
+import ReactSwitch from "react-switch";
+
 export function APIcovid() {
   return (
 
@@ -25,7 +27,7 @@ export function APIcovid() {
             <p id="update">Última atualização: <span id="span_atualizacao"></span></p>
           </div>
         </div>
-
+        
         <footer className="footer">
           <p> Igo Kazuhiko Ujiie - Developer </p>
         </footer>
