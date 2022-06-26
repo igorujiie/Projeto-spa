@@ -4,6 +4,7 @@ import { useState } from "react";
 import bugImageUrl from '../../assests/bug.svg';
 import ideaImageUrl from '../../assests/idea.svg';
 import thoughtImageUrl from '../../assests/thought.svg';
+import sugestionImageUrl from '../../assests/download.png'
 import { FeedbackSucessStep } from "./Steps/FeedbackSucessStep";
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
 import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
@@ -28,6 +29,14 @@ export const feedbackTypes = {
         title: 'Outro',
         image: {
             source: thoughtImageUrl,
+            alt: 'Imagem de um balao de pensamento'
+        }
+
+    },
+    SUGESTAO: {
+        title: 'Sugestão',
+        image: {
+            source:  sugestionImageUrl,
             alt: 'Imagem de um balao de pensamento'
         }
 

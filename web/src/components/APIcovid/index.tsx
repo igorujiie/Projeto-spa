@@ -1,40 +1,38 @@
-export function APIcovid(){
-    return(
-      
+export function APIcovid() {
+  return (
 
 
-    
-  <>
-  <body>
-    <header className="header">
-    
-      <h2>Dados por regiao da Covid-19</h2>
-    </header>
+    <>
+      <body>
+        <header className="header">
 
-    <div className="container">
-      <form className="my-form">
-        <label id="label" for="cep">Digite um CEP: </label>
-        <input id="input-cep" type="text" data-js="cep" />
-        <button className="button" id="button">Pesquisar</button>
-      </form>
+          <h2>Dados por regiao da Covid-19</h2>
+        </header>
 
-      <div className="output">
-        <p>Estado: <span id="span_estado"></span></p>
-        <p>Casos: <span id="span_casos"></span></p>
-        <p>Mortes: <span id="span_mortes"></span></p>
-        <p>Suspeitos: <span id="span_suspeitos"></span></p>
-        <p>Recusados: <span id="span_recusados"></span></p>
-        <p id="update">Última atualização: <span id="span_atualizacao"></span></p>
-      </div>
-    </div>
+        <div className="container">
+          <form className="my-form">
+            <label id="label" htmlFor="cep">Digite um CEP: </label>
+            <input id="input-cep" type="text" data-js="cep" />
+            <button className="button" id="button">Pesquisar</button>
+          </form>
 
-    <footer className="footer">
-      <p> Igo Kazuhiko Ujiie - Developer </p>
-    </footer>
+          <div className="output">
+            <p>Estado: <span id="span_estado"></span></p>
+            <p>Casos: <span id="span_casos"></span></p>
+            <p>Mortes: <span id="span_mortes"></span></p>
+            <p>Suspeitos: <span id="span_suspeitos"></span></p>
+            <p>Recusados: <span id="span_recusados"></span></p>
+            <p id="update">Última atualização: <span id="span_atualizacao"></span></p>
+          </div>
+        </div>
 
-    <script type="module" src="./js/main.js"></script>
-  </body>
-  </>
+        <footer className="footer">
+          <p> Igo Kazuhiko Ujiie - Developer </p>
+        </footer>
 
-    )
+        <script type="module" src="./modules/main.js"></script>
+      </body>
+    </>
+
+  )
 }
